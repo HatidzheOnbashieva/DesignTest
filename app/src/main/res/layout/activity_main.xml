@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        tools:context=".MainActivity">
+
+
+        <View
+            android:id="@+id/vView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/frame_shape"
+            android:layout_marginTop="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageView
+            android:id="@+id/ivProfilePic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bulka"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toTopOf="@id/vView" />
+
+        <ImageView
+            android:id="@+id/ivEditImage"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/punch"
+            android:background="@drawable/ic_edit_image"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfilePic"
+            app:layout_constraintEnd_toEndOf="@id/ivProfilePic" />
+
+
+        <TextView
+            android:id="@+id/firstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="First Name"
+            android:textSize="@dimen/font_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvBirthDate"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toEndOf="@id/ivProfilePic"
+            app:layout_constraintTop_toTopOf="@id/ivProfilePic" />
+
+        <TextView
+            android:id="@+id/tvBirthDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Birth Date Here"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintBottom_toTopOf="@+id/phoneNumber"
+            app:layout_constraintEnd_toEndOf="@id/firstName"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/firstName"
+            app:layout_constraintTop_toBottomOf="@id/firstName" />
+
+        <TextView
+            android:id="@+id/phoneNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Phone Number Here"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintBottom_toTopOf="@+id/tvCountryName"
+            app:layout_constraintEnd_toEndOf="@id/tvBirthDate"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/tvBirthDate"
+            app:layout_constraintTop_toBottomOf="@id/tvBirthDate" />
+
+        <TextView
+            android:id="@+id/tvCountryName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Country Name"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfilePic"
+            app:layout_constraintEnd_toEndOf="@id/phoneNumber"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/phoneNumber"
+            app:layout_constraintTop_toBottomOf="@id/phoneNumber" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.12" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.88" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top"
+            android:text="Display location"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toStartOf="@id/swLocation"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/ivProfilePic" />
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:text="I'm a ..."
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toStartOf="@id/tvGenderAnswer"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/tvLocation" />
+
+        <TextView
+            android:id="@+id/tvGenderAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Gender name"
+            android:textColor="@color/punch"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintBottom_toBottomOf="@id/tvGender"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@id/tvGender" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swLocation"
+            android:layout_width="@dimen/switch_width"
+            android:layout_height="@dimen/switch_height"
+            android:thumb="@drawable/custom_switch"
+            app:layout_constraintBottom_toBottomOf="@id/tvLocation"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@id/tvLocation"
+            app:track="@drawable/custom_switch_track" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGendersList"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/recyclerView_height"
+            android:layout_marginTop="@dimen/default_margin"
+            android:nestedScrollingEnabled="true"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/tvGender" />
+
+        <TextView
+            android:id="@+id/tvAbout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:text="About you"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/rvGendersList" />
+
+        <EditText
+            android:id="@+id/edAbout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/haf_default_margin"
+            android:background="@drawable/edit_text_shape"
+            android:gravity="start"
+            android:hint="Fashion lover, traveler etc..."
+            android:paddingHorizontal="@dimen/about_padding"
+            android:paddingTop="@dimen/about_padding"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/tvAbout" />
+
+        <TextView
+            android:id="@+id/tvProfession"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:text="Profession"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toStartOf="@id/swProfession"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/edAbout" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swProfession"
+            android:layout_width="@dimen/switch_width"
+            android:layout_height="@dimen/switch_height"
+            app:layout_constraintBottom_toBottomOf="@id/tvProfession"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@id/tvProfession"
+            android:thumb="@drawable/custom_switch"
+            app:track="@drawable/custom_switch_track"/>
+
+        <EditText
+            android:id="@+id/edProfession"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="What is your profession"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/tvProfession" />
+
+        <TextView
+            android:id="@+id/tvPassions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:text="Passions"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toStartOf="@id/swPassions"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/edProfession" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swPassions"
+            android:layout_width="@dimen/switch_width"
+            android:layout_height="@dimen/switch_height"
+            app:layout_constraintBottom_toBottomOf="@id/tvPassions"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@id/tvPassions"
+            android:thumb="@drawable/custom_switch"
+            app:track="@drawable/custom_switch_track" />
+
+        <EditText
+            android:id="@+id/edPassions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Cooking, running..."
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/tvPassions" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:background="@drawable/save_btn_shape"
+            android:text="Save"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/edPassions" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
