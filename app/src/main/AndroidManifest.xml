@@ -10,7 +10,7 @@
         android:label="DesignTest"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DesignTest.NoActionBarAndStatusBar">
+        android:theme="@style/Theme.DesignTest">
         <activity
             android:name=".MainActivity"
             android:exported="true">

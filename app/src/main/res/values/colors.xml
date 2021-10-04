@@ -10,4 +10,5 @@
     <color name="gray">#BEBEBE</color>
     <color name="punch">#f82e5e</color>
     <color name="blue">#3059a1</color>
+    <color name="halfTranslucent">#6F000000</color>
 </resources>
